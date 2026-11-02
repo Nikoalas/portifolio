@@ -2,63 +2,152 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Nicholas | Desenvolvedor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nicolas Alves | Desenvolvedor Python e JavaScript</title>
+  <meta name="description" content="Portfólio de Nicolas Alves: ferramentas em Python e JavaScript criadas para resolver problemas reais do trabalho. Aberto a estágio e vagas júnior.">
+  <meta name="theme-color" content="#e6ede7">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header>
-    <h1>Nicolas Alves</h1>
-    <p>software engineer</p>
+  <header class="topo">
+    <a class="marca" href="#inicio">Nicolas Alves</a>
+    <nav aria-label="Principal">
+      <a href="#projetos">Projetos</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#fora">Fora do código</a>
+      <a href="#contato">Contato</a>
+    </nav>
   </header>
 
-  <section id="sobre">
-    <h2>Sobre mim</h2>
-    <p>
-      Sou estudante de tecnologia focado em desenvolvimento web.
-      Estou aprendendo HTML, CSS, JavaScript e aprendendo mais tecnologias todos os dias para criar aplicações seguras e funcionais.
-    </p>
-  </section>
+  <main id="inicio">
 
-  <section id="projetos">
-    <h2>Projetos</h2>
+    <section class="hero">
+      <div class="hero-texto">
+        <h1>Transformo tarefas travadas em ferramentas que funcionam.</h1>
+        <p class="apoio">
+          Estudo engenharia de software e desenvolvo em Python e JavaScript. Trabalho em um cartório de registro, e foi lá que aprendi a
+          entender o problema antes de escrever o código. Agora busco meu primeiro estágio ou vaga júnior
+          em desenvolvimento de software.
+        </p>
+        <p class="status">Aberto a estágio e vagas júnior, presenciais ou remotas.</p>
+        <div class="acoes">
+          <a class="botao" href="#projetos">Ver projetos</a>
+          <a class="link-simples" href="mailto:nikorive.thesousa@gmail.com">Falar comigo</a>
+        </div>
+      </div>
 
-    <div class="projeto">
-      <h3>Projeto 01</h3>
-      <p>QRDCODE.generation</p>
-      <a href="https://github.com/Nikoalas/QRCODE.generation">Ver projeto</a>
-    </div>
+      <button class="carimbo-botao" type="button" title="Clique para carimbar de novo" aria-label="Carimbar de novo">
+      <svg class="carimbo" viewBox="0 0 200 200" role="img" aria-label="Carimbo: ferramentas para problemas reais, feito na prática">
+        <defs>
+          <path id="arco" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0"/>
+        </defs>
+        <circle cx="100" cy="100" r="94" fill="none" stroke="currentColor" stroke-width="4"/>
+        <circle cx="100" cy="100" r="88" fill="none" stroke="currentColor" stroke-width="1.2"/>
+        <circle cx="100" cy="100" r="52" fill="none" stroke="currentColor" stroke-width="1.2"/>
+        <text font-size="12" font-weight="600" fill="currentColor">
+          <textPath href="#arco" textLength="446" lengthAdjust="spacing">FERRAMENTAS PARA PROBLEMAS REAIS • NASCIDAS NO CARTÓRIO •</textPath>
+        </text>
+        <text x="100" y="96" text-anchor="middle" font-size="18" font-weight="700" fill="currentColor">FEITO</text>
+        <text x="100" y="117" text-anchor="middle" font-size="15" font-weight="700" fill="currentColor">NA PRÁTICA</text>
+      </svg>
+      </button>
+    </section>
 
-    <div class="projeto">
-      <h3>Projeto 02</h3>
-      <p>contador de cédula(projetinho bem simples).</p>
-      <a href="https://github.com/Nikoalas/contador">Ver projeto</a>
-    </div>
+    <section id="projetos" class="bloco">
+      <h2>Ferramentas que construí</h2>
 
-  </section>
+      <article class="registro destaque">
+        <h3>Bancada de PDF</h3>
+        <dl>
+          <dt>Problema</dt>
+          <dd>Documentos digitalizados de centenas de MB lotavam o armazenamento e dificultavam o envio e o protocolo. Serviços online exigiriam mandar documentos sensíveis para servidores de terceiros.</dd>
+          <dt>Solução</dt>
+          <dd>Uma página que reduz o PDF direto no navegador: o arquivo nunca sai do computador. Preserva o texto, limpa metadados e avisa quando o PDF parece assinado digitalmente, já que comprimir pode invalidar a assinatura.</dd>
+          <dt>Feito com</dt>
+          <dd>JavaScript puro, HTML e CSS</dd>
+        </dl>
+        <p class="links">
+          <a href="https://nikoalas.github.io/redutor_file/">Abrir a ferramenta</a>
+          <a href="https://github.com/Nikoalas/redutor_file">Ver código</a>
+        </p>
+      </article>
 
-  <section id="habilidades">
-    <h2>Habilidades</h2>
-    <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
-      <li>Python</li>
-      <li>MySQL</li>
-      <li>Git/Github</li>
-    </ul>
-  </section>
+      <article class="registro">
+        <h3>Gerador de QR Code</h3>
+        <dl>
+          <dt>Problema</dt>
+          <dd>Muitos idosos atendidos no cartório tinham dificuldade com o ambiente digital, e os sites que geravam QR Code eram pagos.</dd>
+          <dt>Solução</dt>
+          <dd>Um script curto: cola o endereço de um site e ele gera o QR Code correspondente.</dd>
+          <dt>Feito com</dt>
+          <dd>Python e a biblioteca qrcode</dd>
+        </dl>
+        <p class="links">
+          <a href="https://github.com/Nikoalas/QRCODE.generation">Ver código</a>
+        </p>
+      </article>
+    </section>
 
-  <section id="contato">
-    <h2>Contato</h2>
-    <p>Email: nikorive.thesousa@gmail.com</p>
-    <p>GitHub: https://github.com/Nikoalas</p>
-    <p>Whatsapp: (64) 99972-0258</p>
-  </section>
+    <section id="sobre" class="bloco estreito">
+      <h2>Como eu trabalho</h2>
+      <p>
+        Primeiro entendo quem vai usar e o que está travando. Depois construo a solução mais simples que resolva.
+        O gerador de QR Code é pequeno porque o problema era pequeno. A Bancada de PDF é maior porque o problema
+        exigia privacidade.
+      </p>
+      <dl class="stack">
+        <dt>Linguagens</dt>
+        <dd>Python, Java, JavaScript, HTML e CSS</dd>
+        <dt>Ferramentas</dt>
+        <dd>Docker, MySQL, Git e GitHub</dd>
+        <dt>Estudando agora</dt>
+        <dd>Estruturas de dados, inteligência artificial e engenharia de software</dd>
+      </dl>
+    </section>
 
-  <footer>
-    <p>© 2026 Nicholas</p>
+    <section id="fora" class="bloco estreito">
+      <h2>Fora do código</h2>
+      <p>Matemática e Física são as minhas matérias favoritas, e acho que é por isso que estruturas de dados e algoritmos me prendem tanto. O resto do tempo vai para estes mundos:</p>
+      <dl class="stack">
+        <dt>Universos</dt>
+        <dd>Pokémon, O Senhor dos Anéis e O Hobbit</dd>
+        <dt>Matérias</dt>
+        <dd>Matemática e Física</dd>
+        <dt>Trilha sonora</dt>
+        <dd>Rock, com Slipknot na frente. Mas meu gosto é eclético e muda bastante.</dd>
+      </dl>
+    </section>
+
+    <section id="contato" class="bloco estreito">
+      <h2>Vamos conversar</h2>
+      <p>Se você tem uma vaga de estágio ou júnior, ou só quer trocar uma ideia sobre os projetos, escreva para mim.</p>
+      <p class="contatos">
+        <a href="mailto:nikorive.thesousa@gmail.com">nikorive.thesousa@gmail.com</a>
+        <a href="https://github.com/Nikoalas">github.com/Nikoalas</a>
+        <!-- Quando tiver LinkedIn, adicione aqui: <a href="SEU_LINK">LinkedIn</a> -->
+      </p>
+    </section>
+
+  </main>
+
+  <footer class="rodape">
+    <p>© 2026 Nicolas Alves. Nenhum anel foi forjado na criação deste site.</p>
   </footer>
 
+<script>
+  var botao = document.querySelector(".carimbo-botao");
+  if (botao) {
+    botao.addEventListener("click", function () {
+      var carimbo = botao.querySelector(".carimbo");
+      carimbo.style.animation = "none";
+      void carimbo.getBoundingClientRect();
+      carimbo.style.animation = "";
+    });
+  }
+</script>
 </body>
 </html>
